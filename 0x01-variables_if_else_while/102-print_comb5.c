@@ -1,42 +1,40 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
 /**
- * main - Entry point
+ * 
  *
- * Return: Always 0 (Success)
+ * Description: print
+ *
+ *
+ *
  */
-int main(void)
+int main()
 {
-	int i, j;
-	int a, b, c, d;
+	int n1 = 0, n2;
 
-	for(i = 0;i < 100; i++)
+	while(n1 <= 99)
 	{
-		a= i / 10;/*doubles fnum*/
-		b= i % 10;/*singles fnum*/
-		
-		for(j = 0;j < 100; j++)
+		n2 = n1;
+		while(n2 <= 99)
 		{
-			c= j /10;/*doubles snum*/
-			d= j % 10;/*singles snum*/
-			
-			if (a < c || (a == c&& b<d))
+			if (n2 !=n1)
 			{
-				putchar(a + '0');
-				putchar(b + '0');
-				putchar(32);
-				putchar(c + '0');
-				putchar(d + '0');
+				putchar((n1 / 10) + 48);
+				putchar((n1 % 10) + 48);
+				putchar(' ');
+				putchar((n2 / 10) + 48);
+				putchar((n2 % 10) + 48);
 
-				if (!(a == 9&& b == 8)
+				if(n1 != 98 || n2 != 98)
 				{
-					putchar(44);
-					putchar(32);
+					putchar(',');
+					putchar(' ');
 				}
 			}
+			++n2;
 		}
+		++n1;
 	}
-	putchar(10);
-	return (0);
+	putchar('\n')
+	return 0;
 }
