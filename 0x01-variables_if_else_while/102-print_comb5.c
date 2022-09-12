@@ -2,26 +2,26 @@
 #include <stdlib.h>
 #include <time.h>
 /**
- * main - entry point
+ * main - Entry point
  *
- * Return: Always 0 (success)
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
 	int i, j;
-	int a, b, c d;
+	int a, b, c, d;
 
 	for(i = 0;i < 100; i++)
 	{
-		a= i / 10;/* doubles fnum */
-		b= i % 10;/* singles fnum */
+		a= i / 10;/*doubles fnum*/
+		b= i % 10;/*singles fnum*/
 		
 		for(j = 0;j < 100; j++)
 		{
-			c= j /10;/* doubles snum */
-			d= j % 10;/* singles snum */
+			c= j /10;/*doubles snum*/
+			d= j % 10;/*singles snum*/
 			
-			if (a < c || (a == c&& b<d > d))
+			if (a < c || (a == c&& b<d))
 			{
 				putchar(a + '0');
 				putchar(b + '0');
